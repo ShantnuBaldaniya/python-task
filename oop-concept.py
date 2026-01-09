@@ -87,4 +87,89 @@ animals = [Dog(), Cat(), Animal()]
 for animal in animals:
     print(animal.sound())
     
+    
+    
+class student:
+    def __init__(self,name,rollnumber,marks):
+        self.name=name
+        self.rollnumber=rollnumber
+        self.marks=marks
+    
+    def student_name(self):
+        return self.name
+    def student_rollnumber(self):
+        return self.rollnumber
+    def student_marks(self):
+        
+        return self.marks
+    
+s=student('shantu',33,23)     
+print('name',s.student_name())
+print('no=',s.student_rollnumber())
+print('marks',s.student_marks())
 
+
+class bankaccount:
+    def __init__(self,accountnumber,holdername,balance):
+        self.accountnumber=44535332
+        self.holdername='shantnu'
+        self.balance=3232
+    
+    def deposite(self,amount):
+        
+        self.balance+=amount
+        
+    def withdraw(self,amount):
+        self.balance-=amount
+        
+    def check_balance(self):
+        return self.balance
+    
+b= bankaccount(4444444,'shantnu',3232)
+b.deposite(9999)
+b.withdraw(3232)
+print(b.check_balance())
+
+
+class shape:
+    def __init__(self,length,width):
+        self.lenght=length
+        self.width=width
+    def calculatearea(self):
+        return 2*(self.width+self.lenght)
+    # def calculateperimeter(self):
+    #     return self.width*self.length
+    
+r=shape(3,5)
+print('area is = ',r.calculatearea())
+# print('peremiter is =',r.calculateperimeter())
+
+
+class employee:
+    def __init__(self,id,salary):
+        self.__id=id
+        self.__salary=salary
+    
+    def getsalary(self):
+        return self.__salary
+    
+    def setsalary(self,new):
+        self.__salary=new 
+        return self.__salary
+    
+
+e=employee(23232,30000)
+print('salary is a =',e.getsalary())
+print('after increment=',e.setsalary(34343))
+ 
+class calculator:
+    def add(self,a,b,c=None):
+    
+        if c is None:
+            return a+b
+        else:
+            return a+b+c
+        
+c=calculator()
+print(c.add(2,3))
+print(c.add(2.3,5,9.9))

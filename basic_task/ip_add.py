@@ -1,12 +1,12 @@
-ip = input("Enter IP: ")
-
-dot = 0
-
-for i in ip:
-    if i == '.':
-        dot = dot + 1
-
-if dot == 3:
-    print("Valid IP")
+ip=input('enter the ip address ')
+parts=ip.split('.')
+if len(parts)==4:
+    for p in parts:
+        if not  p.isdigit():
+            print('invalid ip address')
+            break
+    else:
+        print(' your ip is valid')
 else:
-    print("Invalid IP")
+    print('ip is not valid')
+    

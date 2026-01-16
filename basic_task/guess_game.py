@@ -14,3 +14,6 @@ while(user!=number):
         print('too low ')
     else:
         print('enter valid number')
+        
+else: print('hii')
+

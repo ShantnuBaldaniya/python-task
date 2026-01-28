@@ -385,8 +385,18 @@
 # print(list2)
 
 
-age=9
-if age>=18:
-    print('u can vote')
-else:
-    print('not')
+# age=9
+# if age>=18:
+#     print('u can vote')
+# else:
+#     print('not')
+    
+string='this is shantnu '
+word=string.split()
+print(word)
+rev=''
+for i in word:
+    
+    rev+=i[::-1]+'  '
+print(rev.strip())
+    

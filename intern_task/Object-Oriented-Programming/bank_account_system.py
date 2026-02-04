@@ -5,13 +5,15 @@ class Account:
         self.balance=balance
     def deposite(self,amount):
         if amount>0:
-            return ('new balance is:',self.balance+amount)
+            self.balance+= amount
+            return ('after deposite  balance is:',self.balance)
         else:
             return ('enter amount postive')
     
     def withdraw(self,amount):
         if amount<=self.balance:
-            return ('succes withdraw',self.balance-amount)
+            self.balance-=amount
+            return ('succes withdraw after balance is:',self.balance)
         else:
             return ('insufficient balance')
         
@@ -26,16 +28,31 @@ class SavingAccount(Account):
     def calculate_interest(self):
         I=self.balance*self.interest_rate
         self.balance+=I
-        print('your baalnce is after int:',self.balance)
+        print('your balance is after int:',self.balance)
         
         
     
 class CurrentAccount(Account):
-    def __init__(self,ac_num,holder_name,balance):
+    def __init__(self,ac_num,holder_name,balance,overdraft=300000):
         super().__init__(ac_num,holder_name,balance)
+        self.overdraft=overdraft
     
-    def withdraw(self,balance,overdraft=300000):
+    def withdraw(self,amount):
         
-        s
-        
+        if amount<self.balance+self.overdraft:
+            self.balance-=amount
+            return('withdraw succ balance is:',self.balance)
+        else:
+            print('sorry!,your limit has been over')
+            
+a=Account(1234,'shantnu',303030)
+s=SavingAccount(1234,'shantnu',303030)
+c=CurrentAccount(1234,'shantnu',3030,303)
+
+print(a.deposite(3))
+print(a.get_balance())
+
+s.calculate_interest()
+c.withdraw(33333)
+
         

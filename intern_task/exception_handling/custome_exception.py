@@ -18,7 +18,7 @@ try:
     def withdraw(amount,balance):
         if amount>balance:
             
-            raise InsufficientFundsError('sorry! your balance is a lower')
+            raise InsufficientFundsError('sorry! your balance is a low')
         return balance-amount 
     
     b=int(input('etnter the balance:'))
@@ -47,3 +47,5 @@ try:
     print(list1)
 except DuplicateEntryError as e:
     print(e)
+    
+        

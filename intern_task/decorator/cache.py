@@ -18,6 +18,9 @@ def square(n):
 
 print(square(5))   
 print(square(5))   
-print(square(6))  
+
 print(square(6))  
 
+print(square(5454545))
+print(square(-5454545))
+print(square(54545))
